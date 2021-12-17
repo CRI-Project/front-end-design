@@ -1,13 +1,14 @@
 const amqp = require('amqplib/callback_api');
 let msgStack = [];
 let boolSwitch = "1";
+let location = null;
 let url = {
     protocol: 'amqp',
     hostname: '8.141.56.170',
     port: 5672,
     username: 'lzz',
     password: '123456',
-    vhost: '/'
+    vhost: '/lzz'
 }
 
 amqp.connect(url, function(error0, connection) {
@@ -37,11 +38,13 @@ amqp.connect(url, function(error0, connection) {
             queue,
             msg => {
                 msgStack = JSON.parse(msg.content.toString())
+                console.log("收到消息：", msgStack)
                 msgStack.dateTime = new Date().toLocaleTimeString()
                 msgStack.humidity = parseInt(msgStack.humidity);
                 msgStack.ppm = parseFloat(msgStack.ppm.toFixed(1));
                 msgStack.temperature = parseFloat(msgStack.temperature.toFixed(1));
-                console.log("收到消息：", msgStack)
+                msgStack.longitude = parseFloat(msgStack.longitude);
+                msgStack.latitude = parseFloat(msgStack.latitude);
                 channel.ack(msg);
             },
             opt
