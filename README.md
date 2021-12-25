@@ -1,5 +1,5 @@
 # csmu_cri_filtration_project_front
-
+The structure of code is <a href="https://github.com/CRI-Project/front-end-design/blob/main/src/README.md">here</a> 
 ## Project setup
 ```
 yarn install
