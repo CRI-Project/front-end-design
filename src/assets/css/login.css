@@ -1,0 +1,242 @@
+.login-main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/login/background.png");
+}
+
+.login-right-cloud img {
+    position: absolute;
+    left: 40.764%;
+    top: 7.227%;
+    width: 18%;
+}
+
+.login-left-cloud img {
+    position: absolute;
+    left: 4.44%;
+    top: 9.082%;
+    width: 19%;
+}
+
+.login-earth img {
+    position: absolute;
+    left: 22.014%;
+    top: 51.758%;
+    width: 23.403%;
+
+}
+
+.login-welcome-text {
+    position: absolute;
+    left: 12.917%;
+    top: 22.168%;
+    width: 40.903%;
+    height: 19.336%;
+
+    font-family: Alibaba PuHuiTi, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 66px;
+    text-align: center;
+    white-space: pre-line;
+
+    color: #FFFFFF;
+}
+
+.login-box {
+    position: absolute;
+    width: 33.264%;
+    height: 100%;
+    left: 66.736%;
+
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px 0 0 50px;
+}
+
+.login-logo img {
+    position: absolute;
+    width: 5.278%;
+    left: 80.764%;
+    top: 20.851%;
+}
+
+.other-way-to-login {
+    position: absolute;
+    left: 68.056%;
+    top: 37.971%;
+    width: 30.694%;
+    height: 4.638%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.login-Gmail-bg {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    border: 1px solid #DCDFE6;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.login-Gmail-button {
+    position: absolute;
+    height: 19px;
+    left: 21.05%;
+    right: 21.05%;
+    top: calc(50% - 19px / 2 + 1.5px);
+
+    font-family: Alibaba PuHuiTi, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #4D4F53;
+}
+
+.login-button-box {
+    position: absolute;
+    left: 76.458%;
+    top: 68.457%;
+    width: 13.889%;
+    height: 6.087%;
+}
+
+.login-button {
+    position: absolute;
+    left: 76.458%;
+    top: 68.457%;
+    width: 13.889%;
+    height: 6.087%;
+
+    background: #17ACA3;
+    border-radius: 4px;
+
+    font-family: Alibaba PuHuiTi, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.login-button:hover{
+    background: #148f88;
+}
+
+.register-button {
+    position: absolute;
+    left: 76.458%;
+    top: 78%;
+    width: 13.889%;
+    height: 6.087%;
+
+    background: #17ACA3;
+    border-radius: 4px;
+
+    font-family: Alibaba PuHuiTi, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+
+
+.login-account-box {
+    position: absolute;
+    width: 30%;
+    height: 5.469%;
+    left: 66.944%;
+    top: 49.502%;
+}
+
+.login-account-name {
+    position: absolute;
+    height: 16px;
+    left: 6.55%;
+    right: 70.82%;
+    top: calc(50% - 16px / 2);
+
+    font-family: Alibaba PuHuiTi, cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 89%;
+    /* identical to box height, or 89% */
+
+
+    color: #000000;
+}
+
+.login-account-input {
+    position: absolute;
+    left: 29.2%;
+    width: 71%;
+    height: 100%;
+    padding: 0;
+    border: 1px solid #1989FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.login-password-box{
+    position: absolute;
+    width: 30%;
+    height: 5.469%;
+    left: 66.944%;
+    top:  59.198%;
+}
+
+.login-password-name{
+    position: absolute;
+    height: 16px;
+    left: 6.55%;
+    right: 70.82%;
+    top: calc(50% - 16px/2);
+
+    font-family: Alibaba PuHuiTi, cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    /* identical to box height, or 89% */
+
+
+    color: #000000;
+}
+
+.login-password-input{
+    position: absolute;
+    left: 29.2%;
+    width: 71%;
+    height: 100%;
+
+    border: 1px solid #1989FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+}

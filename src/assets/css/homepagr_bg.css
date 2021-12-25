@@ -1,0 +1,281 @@
+.main {
+    background-color: rgb(80, 169, 162);
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo img {
+    position: absolute;
+    width: 5.764%;
+    left: 0.972%;
+    top: 2.539%;
+}
+
+.house-active img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    top: 156px;
+}
+
+.house-active-bg img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 34px;
+    top: 146px;
+
+    background: #F1F1F1;
+    border-radius: 25px 0 0 25px;
+}
+
+.house-default-1{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50px;
+    top: 287px;
+
+}
+
+.house-default-2{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50px;
+    top: 406px;
+}
+
+.house-default-3{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50px;
+    top: 525px;
+}
+
+.view{
+    position: absolute;
+    width: 92.43%;
+    height: 100%;
+    left: 109px;
+    top: 0;
+
+    background: #F1F1F1;
+    border-radius: 75px 50px 50px 75px;
+}
+
+.main-module{
+    position: absolute;
+    width: 73.333%;
+    height: 49.805%;
+    left: 22px;
+    top: 22px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.main-module-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 50px;
+}
+
+.map{
+    position: absolute;
+    width: 44.791%;
+    height: 41.992%;
+    left: 22px;
+    bottom: 22px;
+}
+
+.map-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+.map-main{
+    position: absolute;
+    width: 94%;
+    height: 75%;
+    left: 3%;
+    bottom: 5%;
+
+    background: #2983BB;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+.air{
+    position: absolute;
+    width: 26.528%;
+    height: 41.992%;
+    left: 48.4%;
+    top: 55.469%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.air-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    border-radius: 50px;
+}
+
+.user-group{
+    position: absolute;
+    width: 22%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+.user-group-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 50px;
+}
+
+.line-chart{
+    position: absolute;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.line-chart-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.line-chart-1{
+    width: 50%;
+    height: 74.2%;
+    left: 3%;
+    top: 20%;
+}
+
+.line-chart-1-bg{
+    background: linear-gradient(#B8F1CC, white);
+}
+
+.line-chart-2{
+    width: 40%;
+    height: 45%;
+    right: 3%;
+    top: 49%;
+}
+
+.line-chart-2-bg{
+    background: linear-gradient(#B8F1ED, white);
+}
+
+.line-chart-3{
+    width: 40%;
+    height: 25%;
+    right: 3%;
+    top: 20%;
+}
+
+.line-chart-3-bg{
+    background: linear-gradient(#F1F1B8, white);
+}
+
+.date-box{
+    position: absolute;
+    width: 262px;
+    height: 40px;
+    left: 3%;
+    top: 5%;
+}
+
+.input-name{
+    position: absolute;
+    height: 16px;
+    left: 6.55%;
+    right: 70.82%;
+    top: 25%;
+
+    font-family: Alibaba PuHuiTi, cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 89%;
+}
+
+.input-box{
+    position: absolute;
+    top: 0;
+    left: 29.2%;
+    width: 71%;
+    height: 100%;
+    border: 1px solid #1989FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.area-box{
+    position: absolute;
+    width: 262px;
+    height: 40px;
+    left: 30%;
+    top: 5%;
+}
+
+.id-box{
+    position: absolute;
+    width: 262px;
+    height: 40px;
+    left:57%;
+    top: 5%;
+}
+
+.query-button{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    left:85%;
+    top: 5%;
+}
+
+.query-button-text{
+    position: absolute;
+    height: 19px;
+    left: 21.05%;
+    right: 21.05%;
+    top: 26%;
+
+    font-family: Alibaba PuHuiTi, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.query-button-bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background: #0486FE;
+    border-radius: 4px;
+}
+
