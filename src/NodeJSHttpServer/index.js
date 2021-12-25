@@ -81,6 +81,6 @@ app.get('/switch', (req, res) => {
     setTimeout(() => {}, 3000);
 })
 
-app.listen(3000,()=>{
+app.listen(3010,()=>{
     console.log('node server is running on 3000');
 })

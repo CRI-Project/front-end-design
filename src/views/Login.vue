@@ -39,7 +39,7 @@
           title="register"
           size='35%'
           :visible.sync="isRegister"
-          :direction="rtl"
+          :direction="side"
           :with-header="false">
         <register @handleClose = "close"/>
       </el-drawer>
@@ -65,6 +65,7 @@ export default {
       welcome: "Welcome \n to \n Climate Response Ireland",
       gmail: "login with gmail",
       logInButton: "log in",
+      side: "rtl",
       loginForm: {
         username: "",
         password: ""
@@ -95,7 +96,7 @@ export default {
             that.$Message.error("Operation is Failed");
           } else {
             that.$store.dispatch("userLogin", true);
-            // console.log("aaa")
+            console.log("aaa")
             localStorage.setItem("Flag", "isLogin");
             that.$router.push("/main");
           }

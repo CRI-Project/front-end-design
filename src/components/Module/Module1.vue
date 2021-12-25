@@ -1,4 +1,5 @@
 <template>
+<!--  -->
   <v-card
       style="border-radius: 50px; width: 2000px"
   >
@@ -60,12 +61,13 @@
       </v-col>
       <v-col>
         <v-btn style="background-color: #17ACA3; color: white; width: 100px; height: 40px; margin-top: 8px"
-               @click="this.showMessage">
+               @click="query">
           QUERY
         </v-btn>
       </v-col>
     </v-row>
-    <!--操作模块模块待实现s-->
+    <!--        <line-chart2></line-chart2>-->
+    <!--        <line-chart3></line-chart3>-->
     <v-row>
       <v-col>
         <v-container>
@@ -194,12 +196,6 @@ export default {
     }
   },
   methods: {
-    showMessage() {
-      this.$store.dispatch('message/openSnackbar', {
-        msg: '封装成功',
-        color: 'success'
-      })
-    },
     query() {
       getList().then(res => {
         this.sensorData.push(res.data)

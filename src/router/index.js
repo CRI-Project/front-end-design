@@ -12,18 +12,18 @@ const routes = [
         path: '/',
         name: 'Login',
         component: Login,
-        // meta: {
-        //     isLogin : false
-        // }
+        meta: {
+            isLogin: false
+        }
     },
     {
         path: '/main',
         name: 'main',
         component: Layout,
         redirect: '/main/home',
-        // meta: {
-        //     isLogin : true
-        // },
+        meta: {
+            isLogin: true
+        },
         children: [
             {
                 path: '/main/home',
@@ -41,7 +41,7 @@ const routes = [
 
 const router = new VueRouter({
     routes,
-    mode:'hash'
+    mode: 'hash'
 })
 
 export default router

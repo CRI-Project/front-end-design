@@ -1,3 +1,4 @@
+<!--information of map-->
 <template>
   <div class="container">
     <el-amap
@@ -17,14 +18,14 @@ export default {
   name: "Module2",
   data() {
     return {
-      center: [113.203, 25.2042],
+      center: [119.194, 26.058],
       markers:[],
     }
   },
   mounted() {
     this.markers = [
       {
-        position: [113.203, 25.2042]
+        position: [119.194, 26.058]
       },
     ];
   },

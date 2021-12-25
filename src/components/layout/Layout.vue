@@ -1,4 +1,5 @@
 <template>
+<!--  -->
   <div class="v-application--wrap" style="background-color: #17ACA3">
     <!--导航菜单-->
     <NavBar />

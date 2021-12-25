@@ -1,4 +1,5 @@
 <template>
+<!--  -->
   <v-list dense :nav="!enableMini">
     <div v-for="(menu, index) in menus" :key="index">
       <v-list-item
