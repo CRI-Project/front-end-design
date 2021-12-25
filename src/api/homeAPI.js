@@ -1,9 +1,7 @@
 import axios from "axios";
-// import request from "../util/request";
-const weatherURL = 'https://wthrcdn.etouch.cn/weather_mini?citykey=101230101'
 
 export const getList = () => {
-    return axios.get('localhost:3010/amqp')
+    return axios.get('localhost:3000/amqp')
 }
 
 export const changeState = () => {
@@ -15,13 +13,9 @@ export const getState = () => {
 }
 
 export const getWeather = () => {
-    return axios.get(weatherURL)
+    return axios.get('https://wthrcdn.etouch.cn/weather_mini?citykey=101230101')
 }
 
 export const getAirQuality = () => {
-    return axios.get('https://api.waqi.info/feed/fuzhou/?token=aa50acc9ef4b0f0771dec39d2cd2007d2da88089 ')
-}
-
-export const postLoginForm = () => {
-    return axios.post('http://8.141.56.170:8084/userinfo/login', {})
+    return axios.get('https://api.waqi.info/feed/fuzhou/?token=aa50acc9ef4b0f0771dec39d2cd2007d2da88089')
 }

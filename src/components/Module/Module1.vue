@@ -39,7 +39,7 @@
         </v-menu>
       </v-col>
       <v-col
-          cols:="12"
+          cols="12"
           sm="3"
       >
         <v-select

@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const registerAPI = (data) => {
-    console.log(data)
 
     return axios({
         method: 'post',
@@ -11,7 +10,6 @@ export const registerAPI = (data) => {
 }
 
 export const loginAPI = (data) => {
-    console.log(data)
 
     return axios({
         method: 'post',

@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import {postLoginForm} from "../api/homeAPI";
+import {loginAPI} from "../api/loginAPI"
 import Register from "../components/Register";
 
 export default {
@@ -87,20 +87,25 @@ export default {
     login() {
       this.$refs.loginFormRef.validate(async valid => {
         if (!valid) return;
-        var that = this;
-        const formData = new FormData();
-        formData.append("email", this.loginForm.email)
-        formData.append("password", this.loginForm.password)
-        postLoginForm('POST', formData).then(data => {
-          if (data.status !== 200) {
-            that.$Message.error("Operation is Failed");
-          } else {
-            that.$store.dispatch("userLogin", true);
-            console.log("aaa")
-            localStorage.setItem("Flag", "isLogin");
-            that.$router.push("/main");
+        loginAPI(this.loginForm).then(res => {
+          if(res.data.code === 500) {
+            this.$store.dispatch('message/openSnackbar', {
+              msg: res.data.msg,
+              color: 'warning',
+            })
+          }else {
+            this.$store.dispatch('message/openSnackbar', {
+              msg: res.data.msg,
+              color: 'success',
+            })
+            this.$router.push("/main")
           }
-        });
+        }).catch(err => {
+          this.$store.dispatch('message/openSnackbar', {
+            msg: err,
+            color: 'error',
+          })
+        })
       })
     },
     register(){

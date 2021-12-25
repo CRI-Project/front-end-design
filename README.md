@@ -1,4 +1,4 @@
-# csmu_cri_filtration_project_front
+# CRI-Project-front-end-design
 The structure of code is <a href="https://github.com/CRI-Project/front-end-design/blob/main/src/README.md">here</a> 
 ## Project setup
 ```

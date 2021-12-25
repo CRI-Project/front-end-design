@@ -1,22 +1,17 @@
 /**
- * @param msg 信息
- * @param color snackbar 颜色
- * @param visible 是否可见
- * @param showClose 关闭按钮
- * @param timeout 停留持续时间
+ * @param msg Message of state
+ * @param color Colour of snackbar
+ * @param visible Visibility of snackbar
  */
 const message = {
-    //
     namespaced: true,
     state: {
         msg: '',
         color: '',
         visible: false,
-        showClose: true,
-        timeout: 5000,
 
     },
-    // 逻辑处理,同步函数
+    // Logical processing and synchronization function
     mutations: {
         OPEN_SNACKBAR(state, options) {
             state.visible = true
@@ -26,25 +21,18 @@ const message = {
         CLOSE_SNACKBAR(state) {
             state.visible = false
 
-        },
-        setShowClose(state, isShow) {
-            state.showClose = isShow
-        },
-        setTimeout(state, timeout) {
-            state.timeout = timeout
-        },
+        }
     },
-    // 逻辑处理,异步函数
+    // Logical processing and asynchronous functions
     actions :{
         openSnackbar (context,options){
-            let timeout = context.state.timeout
             context.commit('OPEN_SNACKBAR',{
                 msg:options.msg,
                 color:options.color
             })
             setTimeout(()=>{
                 context.commit('CLOSE_SNACKBAR')
-            },timeout)
+            },800)
         }
     }
 }
