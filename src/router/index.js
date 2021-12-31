@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from "../views/Login";
 import Layout from "../components/layout/Layout";
-import Home1 from "../views/HomePage/Home";
+import Home from "../views/HomePage/Home";
 import Control from "../views/Contorl/Control";
 
 Vue.use(VueRouter)
@@ -28,7 +28,7 @@ const routes = [
             {
                 path: '/main/home',
                 name: 'home',
-                component: Home1
+                component: Home
             },
             {
                 path: '/control',

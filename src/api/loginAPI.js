@@ -1,5 +1,10 @@
+/**
+ * This is a javascript file of the APIs on login page use axios
+ * @author Lihao Qiu
+ */
 import axios from "axios";
 
+//The API of register
 export const registerAPI = (data) => {
 
     return axios({
@@ -9,6 +14,7 @@ export const registerAPI = (data) => {
     })
 }
 
+//The API of login
 export const loginAPI = (data) => {
 
     return axios({

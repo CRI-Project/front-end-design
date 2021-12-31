@@ -1,5 +1,5 @@
+<!--The component of navigation bar-->
 <template>
-<!--  -->
   <v-navigation-drawer
       app
       :color="color"

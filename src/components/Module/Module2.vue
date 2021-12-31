@@ -1,10 +1,11 @@
 <!--information of map-->
 <template>
-  <div class="container">
+  <div class="container" style="background-color: rgb(203,223,166);border-radius: 50px">
     <el-amap
         class="amap-box"
         :vid="'amap-vue'"
         :center="center"
+        style="width: 110%"
     >
       <el-amap-marker v-for="(marker,index) in markers" :key="index" :position="marker.position">
       </el-amap-marker>

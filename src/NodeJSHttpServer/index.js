@@ -1,7 +1,7 @@
 const amqp = require('amqplib/callback_api');
 let msgStack = [];
 let boolSwitch = "1";
-let location = null;
+// let location = null;
 let url = {
     protocol: 'amqp',
     hostname: '8.141.56.170',
@@ -81,6 +81,6 @@ app.get('/switch', (req, res) => {
     setTimeout(() => {}, 3000);
 })
 
-app.listen(3010,()=>{
+app.listen(3000,()=>{
     console.log('node server is running on 3000');
 })

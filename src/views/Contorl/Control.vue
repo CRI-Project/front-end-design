@@ -1,35 +1,39 @@
 <template>
   <div>
+
     <v-data-table
         :headers="headers"
         :items="sensorTable"
         :items-per-page="10"
         class="elevation-1"
     >
+      <template v-slot:item.switch="{item}">
+        <v-switch
+            v-model="item.switchState"
+            @click="changeSensorState"
+        ></v-switch>
+      </template>
     </v-data-table>
-    <v-btn @click="changeSensorState(1)">
-      OPEN/CLOSE
-    </v-btn>
   </div>
 </template>
 
 <script>
-import {getList, changeState} from "../../api/homeAPI";
+import {getList, changeState, getState} from "../../api/homeAPI";
 
 export default {
   name: "Control",
   data() {
     return {
       headers: [
-        {text: 'Device Name', value:'processorCode'},
-        {text: 'Update Time', value:'dateTime'},
-        {text: 'Temp(˚C)', value:'temperature'},
-        {text: 'CO2(ppm)', value:'ppm'},
-        {text: 'Humidity(%)', value:'humidity'},
+        {text: 'Device Name', value: 'processorCode'},
+        {text: 'Update Time', value: 'dateTime'},
+        {text: 'Temp(˚C)', value: 'temperature'},
+        {text: 'CO2(ppm)', value: 'ppm'},
+        {text: 'Humidity(%)', value: 'humidity'},
+        {text: 'Switch', value: 'switch', sortable: false},
       ],
-      sensorTable:[],
-      page: 1,
-      URL: "/generator/sensordatatest/testInfo/",
+      sensorTable: [],
+      switchState: true,
     }
   },
   methods: {
@@ -45,14 +49,31 @@ export default {
     changeSensorState() {
       changeState().then(res => {
         console.log(res)
+        if (res.data === 1) {
+          this.$store.dispatch("message/openSnackbar", {
+            msg: "Sensor Engaged Success!",
+            color: "success",
+          })
+        } else {
+          this.$store.dispatch("message/openSnackbar", {
+            msg: "You Close the Sensor!",
+            color: "error",
+          })
+        }
       }).catch(err => {
         console.log(err)
       })
-    }
+    },
+
   },
   mounted() {
     this.query()
-    this.changeSensorState()
+    getState().then(res => {
+      let data = res.data;
+      this.switchState = data === 1;
+    }).catch(err => {
+      console.log(err);
+    })
     this.timer = setInterval(() => {
       setTimeout(this.query, 0)
     }, 1000 * 10)

@@ -1,5 +1,5 @@
+<!--The component of menu list-->
 <template>
-<!--  -->
   <v-list dense :nav="!enableMini">
     <div v-for="(menu, index) in menus" :key="index">
       <v-list-item
@@ -50,6 +50,7 @@ export default {
     }
   },
   methods: {
+    //route to different page
     nav2(path) {
       this.$router.push(path)
     }

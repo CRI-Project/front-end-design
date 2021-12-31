@@ -51,7 +51,7 @@ export default {
         ],
         password: [
           {required: true, message: 'Enter Password', trigger: 'blur'},
-          {min: 8, max: 20, message: 'Password between 8 - 20 long', trigger: 'blur'}
+          {min: 6, max: 20, message: 'Password between 6 - 20 long', trigger: 'blur'}
         ],
         checkPassword: [
           {validator: validatePass, trigger: 'blur'}
@@ -70,6 +70,7 @@ export default {
           username: this.registerForm.username,
           password: this.registerForm.password,
         };
+        console.log(registerForm1)
         registerAPI(registerForm1).then(res => {
           if (res.data.code === 500) {
             this.$store.dispatch('message/openSnackbar', {

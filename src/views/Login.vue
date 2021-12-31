@@ -25,7 +25,7 @@
         <div class="login-Gmail-bg"></div>
         <div class="login-Gmail-button">{{ gmail }}</div>
       </div>
-      <el-form class="login-input-box" :model="loginForm" ref="loginFormRef" :rules="loginRules" label-width="80px">
+      <el-form class="login-input-box" :model="loginForm" ref="loginForm" :rules="loginRules" label-width="80px">
         <el-form-item label="Account:" class="login-account-box" prop="username">
           <el-input type="text" id="account" v-model="loginForm.username"/>
         </el-form-item>
@@ -41,7 +41,7 @@
           :visible.sync="isRegister"
           :direction="side"
           :with-header="false">
-        <register @handleClose = "close"/>
+        <register @handleClose="close"/>
       </el-drawer>
     </div>
   </v-app>
@@ -85,20 +85,25 @@ export default {
   },
   methods: {
     login() {
-      this.$refs.loginFormRef.validate(async valid => {
+      this.$refs.loginForm.validate(async valid => {
         if (!valid) return;
         loginAPI(this.loginForm).then(res => {
-          if(res.data.code === 500) {
+          if (res.data.code === 500) {
             this.$store.dispatch('message/openSnackbar', {
               msg: res.data.msg,
               color: 'warning',
             })
-          }else {
+          } else {
             this.$store.dispatch('message/openSnackbar', {
               msg: res.data.msg,
               color: 'success',
             })
-            this.$router.push("/main")
+            this.$router.push({
+              path: "/main",
+              query: {
+                username: this.loginForm.username
+              }
+            })
           }
         }).catch(err => {
           this.$store.dispatch('message/openSnackbar', {
@@ -108,10 +113,10 @@ export default {
         })
       })
     },
-    register(){
+    register() {
       this.isRegister = true
     },
-    close(){
+    close() {
       this.isRegister = false
     }
   },

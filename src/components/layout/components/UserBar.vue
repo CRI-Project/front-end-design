@@ -1,5 +1,5 @@
+<!--The component of user bar-->
 <template>
-<!--  -->
   <v-navigation-drawer
       app
       color="#fff"
@@ -19,9 +19,9 @@
       <v-list-item link>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            {{ userInfo.userid }}
+            {{ username }}
           </v-list-item-title>
-          <v-list-item-subtitle>{{ userInfo.username }}</v-list-item-subtitle>
+          <v-list-item-subtitle>Kimi_RAI07@formula1.com</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -31,19 +31,13 @@
 <script>
 export default {
   name: "UserBar",
-  created() {
-    this.getData();
-  },
   data() {
     return {
-      userInfo: {},
+
     }
   },
-  methods: {
-    async getData() {
-      const {data: res} = await this.$http.get("/userinfo/save");
-      this.userInfo = res;
-    },
+  props:{
+    username: String
   }
 }
 </script>

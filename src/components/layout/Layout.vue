@@ -1,10 +1,10 @@
+<!--The component of home page-->
 <template>
-<!--  -->
   <div class="v-application--wrap" style="background-color: #17ACA3">
-    <!--导航菜单-->
-    <NavBar />
-    <UserBar></UserBar>
-    <!--头部菜单-->
+    <!--navigation bar-->
+    <NavBar/>
+    <UserBar :username="username"></UserBar>
+    <!--head menu-->
     <v-app-bar
         app
         dense
@@ -14,7 +14,6 @@
         :value="!isMain"
     >
     </v-app-bar>
-    <!--整体容器-->
     <v-main class="main-content" style="background-color: #f1f1f1;">
       <v-container fluid class="height-100pc" style="margin-top: 20px;">
         <transition name="slide-left" appear>
@@ -35,19 +34,21 @@ export default {
   data() {
     return {
       isMain: true,
+      username: ""
     };
   },
 
-  // created: function () {
-  //   if (!this.$route.matched.length) {
-  //     this.$router.push("/");
-  //   }
-  //   let getFlag = localStorage.getItem("Flag");
-  //   let getid = localStorage.getItem("Userid");
-  //   if ((getid===null||getFlag !== "isLogin") && this.$route.path !== '/') {
-  //     this.$router.push("/");
-  //   }
-  // },
+  created() {
+    this.username = this.$route.query.username
+    //   if (!this.$route.matched.length) {
+    //     this.$router.push("/");
+    //   }
+    //   let getFlag = localStorage.getItem("Flag");
+    //   let getid = localStorage.getItem("Userid");
+    //   if ((getid===null||getFlag !== "isLogin") && this.$route.path !== '/') {
+    //     this.$router.push("/");
+    //   }
+  },
 
   mounted() {
 
@@ -58,18 +59,18 @@ export default {
     UserBar
   },
 
-  methods: {
-  },
+  methods: {},
 };
 </script>
 
 <style lang="scss" scoped>
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
-  }
-  v-list-item:hover {
-    background-color: #FFFFFF;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+v-list-item:hover {
+  background-color: #FFFFFF;
+}
 </style>
